@@ -1,0 +1,5 @@
+.local/
+# Symlink to local config file, which is not tracked in git
+jottoma.local.toml
+#
+plan.md

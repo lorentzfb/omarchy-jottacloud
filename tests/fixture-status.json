@@ -1,0 +1,89 @@
+{
+ "User": {
+  "Email": "user@example.com",
+  "Fullname": "Test User",
+  "Avatar": {
+   "Initials": "TU",
+   "Background": {
+    "r": 100,
+    "g": 100,
+    "b": 100
+   }
+  },
+  "Brand": "Jottacloud",
+  "Hostname": "host",
+  "AccountInfo": {
+   "Capacity": -1,
+   "Usage": 1000000000000,
+   "Subscription": 3,
+   "UpgradeHint": true,
+   "SubscriptionNameLocalized": "Personlig abonnement",
+   "ProductNameLocalized": "Personlig abonnement"
+  },
+  "device": {
+   "Name": "test-device",
+   "Type": 12
+  }
+ },
+ "Sync": {
+  "Enabled": true,
+  "Automatic": true,
+  "RootPath": "/home/user/jottasync",
+  "Count": {
+   "Files": 9,
+   "Bytes": 2316832170
+  },
+  "RemoteCount": {
+   "Files": 9,
+   "Bytes": 2316832170
+  },
+  "FolderCount": 3,
+  "LastUpdateMS": 1794050702151
+ },
+ "State": {
+  "RestoreWorking": true,
+  "Uploading": {},
+  "Downloading": {},
+  "LastTokenRefresh": 1794049926
+ },
+ "Backup": {
+  "State": {
+   "Enabled": {
+    "deviceName": "test-device",
+    "Backups": [
+     {
+      "Name": "Pictures",
+      "Path": "/home/user/Pictures",
+      "Count": {
+       "Files": 3874,
+       "Bytes": 567641466
+      },
+      "Uploading": {},
+      "Errors": {},
+      "DeviceID": "00000000-0000-0000-0000-000000000000",
+      "ErrorFilesCount": {},
+      "History": [
+       {
+        "Path": "/home/user/Pictures",
+        "Upload": {
+         "Started": {},
+         "Completed": {}
+        },
+        "Started": 1793993215,
+        "Ended": 1793993215,
+        "Finished": true,
+        "Total": {
+         "Files": 3873,
+         "Bytes": 567267199
+        }
+       }
+      ],
+      "LastUpdateMS": 1794050701883,
+      "LastScanStartedMS": 1794050701883,
+      "NextBackupMS": 1794054301883
+     }
+    ]
+   }
+  }
+ }
+}

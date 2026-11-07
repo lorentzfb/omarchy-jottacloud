@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "lorentzfb.jottacloud",
+  "name": "Jottoma",
+  "version": "1.0.0",
+  "author": "Lorentz Barstad",
+  "license": "MIT",
+  "description": "Visualizes Jottacloud backups from jotta-cli: backup state, per-folder freshness and upload progress, storage split, quick pause, resume and scan controls, and desktop notifications for sync folder changes.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Jottoma",
+    "description": "Jottacloud backup status, freshness, uploads and storage.",
+    "category": "Files",
+    "aliases": ["jotta", "backup", "cloud", "jottacloud"],
+    "allowMultiple": false,
+    "defaultSection": "centerEnd",
+    "defaults": {
+      "refreshIntervalSec": 60,
+      "staleHours": 48,
+      "pauseDuration": "1h",
+      "notifySync": true
+    },
+    "schema": [
+      { "key": "refreshIntervalSec", "type": "integer", "label": "Refresh interval (seconds)", "description": "How often jotta-cli is polled while the panel is closed. It polls every 3 seconds while open.", "min": 10, "max": 3600, "step": 5, "defaultValue": 60 },
+      { "key": "staleHours", "type": "integer", "label": "Warn after (hours)", "description": "Flag the bar icon when a backup folder has not completed in this many hours.", "min": 1, "max": 720, "step": 1, "defaultValue": 48 },
+      { "key": "pauseDuration", "type": "string", "label": "Pause duration", "description": "How long the pause switch pauses jottad, e.g. 30m, 1h, 6h30m.", "defaultValue": "1h" },
+      { "key": "notifySync", "type": "boolean", "label": "Sync notifications", "description": "Show a desktop notification summarizing each sync of the Jottacloud sync folder.", "defaultValue": true }
+    ]
+  }
+}
