@@ -1,4 +1,4 @@
-# Jottoma — Jottacloud backup plugin for the Omarchy shell
+# lorentzfb.jottacloud — Jottacloud backup plugin for the Omarchy shell
 
 Bar widget that visualizes [Jottacloud](https://www.jottacloud.com) backups using `jotta-cli status --json`.
 
