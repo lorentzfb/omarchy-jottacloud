@@ -9,8 +9,8 @@ import "Model.js" as Model
 
 Panel {
   id: root
-  moduleName: "lorentzfb.jottoma"
-  ipcTarget: "lorentzfb.jottoma"
+  moduleName: "lorentzfb.jottacloud"
+  ipcTarget: "lorentzfb.jottacloud"
   manageIpc: false
 
   Commons.Translations { id: strings; directory: Qt.resolvedUrl("i18n") }
@@ -228,12 +228,9 @@ Panel {
             fontFamily: root.fontFamily
             iconOpacity: root.state === "paused" ? 0.5 : 1.0
             iconComponent: Component {
-              Text {
-                textFormat: Text.PlainText
-                text: Model.stateGlyph(root.state)
+              JottacloudIcon {
+                iconSize: Style.font.display
                 color: root.alarming ? root.urgent : root.foreground
-                font.family: root.fontFamily
-                font.pixelSize: Style.font.display
               }
             }
             trailingControl: Component {

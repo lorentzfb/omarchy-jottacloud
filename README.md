@@ -1,4 +1,4 @@
-# lorentzfb.jottacloud — Jottacloud backup plugin for the Omarchy shell
+# Jottacloud Manager - A plugin for the Omarchy shell
 
 Bar widget that visualizes [Jottacloud](https://www.jottacloud.com) backups using `jotta-cli status --json`.
 
@@ -16,7 +16,7 @@ Bar widget that visualizes [Jottacloud](https://www.jottacloud.com) backups usin
 
 **Sync notifications**: the widget runs `jotta-cli sync log --watch` and, each time jottad finishes syncing the sync folder, shows one desktop notification that summarizes the changes (for example, "Jottacloud sync: 3 downloaded, 1 deleted") and lists the first few file names. History that `--watch` replays at startup is ignored. If jottad restarts, the watcher reconnects with a backoff of up to 60 seconds.
 
-**Settings** (`omarchy bar set lorentzfb.jottoma <key> <value>`): `refreshIntervalSec` (60), `staleHours` (48), `pauseDuration` (`1h`), `notifySync` (`true`).
+**Settings** (`omarchy bar set lorentzfb.jottacloud <key> <value>`): `refreshIntervalSec` (60), `staleHours` (48), `pauseDuration` (`1h`), `notifySync` (`true`).
 
 You can also set these keys in `~/.config/jottoma/jottoma.toml` (or under `$XDG_CONFIG_HOME`). Values in that file override `omarchy bar set`, and changes take effect immediately. Each time you save the file, a notification lists the values it now sets. Remove a key to fall back to the bar setting. The file supports top-level `key = value` lines with strings, integers and `true`/`false`, plus `#` comments. Unknown keys and `[sections]` are ignored.
 
